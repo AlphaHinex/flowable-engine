@@ -57,13 +57,6 @@ There's a Jenkins server running the Flowable unit tests on http://qa.flowable.o
 Proper Soft Branch
 ==================
 
-Pack custom version Flowable
-----------------------------
-
-### How to pack
-
-`mvn -DskipTests clean package deploy -P proper`
-
 Pack web designer in jar
 ------------------------
 

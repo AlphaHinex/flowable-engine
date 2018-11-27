@@ -20,7 +20,7 @@ version = '6.4.0-SNAPSHOT'
 task pack(type: Jar) {
     metaInf {
         into 'resources'
-        from 'src/main/webapp'
+        from 'src/main/resources/static'
         exclude 'editor-app/configuration/properties/assignment-display-template.html'
         exclude 'editor-app/configuration/properties/assignment-popup.html'
         exclude 'editor-app/configuration/properties/form-properties-popup.html'
