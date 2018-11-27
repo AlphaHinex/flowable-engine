@@ -83,4 +83,4 @@ and you could find the `flowable-web-designer-xxx.jar` at `modules/flowable-ui-m
 Current version
 ---------------
 
-Now this branch has merged [flowable-6.2.1](https://github.com/flowable/flowable-engine/tree/flowable-6.4.0) tag, and you can find diff [here](https://github.com/flowable/flowable-engine/compare/flowable-6.4.0...propersoft-cn:proper-6.4.0)
+Now this branch has merged [flowable-6.4.0](https://github.com/flowable/flowable-engine/tree/flowable-6.4.0) tag, and you can find diff [here](https://github.com/flowable/flowable-engine/compare/flowable-6.4.0...propersoft-cn:proper-6.4.0)
