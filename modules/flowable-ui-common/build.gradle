@@ -1,21 +1,4 @@
-allprojects {
-    repositories {
-        maven {
-            url "${nexusUrl}/repository/maven-public"
-            credentials(PasswordCredentials) {
-                username = nexusUsername
-                password = nexusPassword
-            }
-        }
-    }
-}
-
-apply plugin: 'java'
-apply plugin: 'maven'
-
-group = 'com.proper.enterprise.platform'
 archivesBaseName = 'flowable-ui-common'
-version = '6.4.0-SNAPSHOT'
 
 ext {
     versions = [:]
@@ -63,17 +46,4 @@ task sourcesJar(type: Jar, dependsOn: classes) {
 
 artifacts {
     archives sourcesJar
-}
-
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            repository(url: "${nexusUrl}/repository/maven-releases") {
-                authentication(userName: nexusUsername, password: nexusPassword)
-            }
-            snapshotRepository(url: "${nexusUrl}/repository/maven-snapshots") {
-                authentication(userName: nexusUsername, password: nexusPassword)
-            }
-        }
-    }
 }
