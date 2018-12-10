@@ -4,23 +4,25 @@ ext {
     versions = [:]
 }
 versions.flowable        = '6.4.0'
+versions.jackson         = '2.9.7'
 versions.spring          = '5.0.9.RELEASE'
 versions.spring_boot     = '2.0.5.RELEASE'
 versions.spring_security = '5.0.8.RELEASE'
-versions.jackson         = '2.9.7'
 
 dependencies {
-    compile "org.flowable:flowable-spring-boot-autoconfigure:${versions.flowable}",
+    compile "org.flowable:flowable-spring-boot-autoconfigure:${versions.flowable}"
+
+    compile "org.springframework.boot:spring-boot-actuator-autoconfigure:${versions.spring_boot}",
             "org.springframework.boot:spring-boot-starter:${versions.spring_boot}",
             "org.springframework:spring-webmvc:${versions.spring}",
-            "org.springframework.security:spring-security-web:${versions.spring_security}",
             "org.springframework.security:spring-security-config:${versions.spring_security}",
-            "com.fasterxml.jackson.datatype:jackson-datatype-json-org:${versions.jackson}",
+            "org.springframework.security:spring-security-web:${versions.spring_security}"
+            
+    compile "com.fasterxml.jackson.datatype:jackson-datatype-json-org:${versions.jackson}",
             "com.fasterxml.uuid:java-uuid-generator:3.1.5",
-            "javax.servlet:javax.servlet-api:3.1.0",
             "com.google.guava:guava:26.0-jre",
-            "org.apache.httpcomponents:httpclient:4.5.6",
-            "org.springframework.boot:spring-boot-actuator-autoconfigure:${versions.spring_boot}"
+            "javax.servlet:javax.servlet-api:3.1.0",
+            "org.apache.httpcomponents:httpclient:4.5.6"
 }
 
 jar {
